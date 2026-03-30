@@ -1,6 +1,13 @@
 {
   "participant_id": {
-    "Description": "unique participant identifier"
+    "Description": "unique participant identifier",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:ParticipantID",
+        "Label": "Participant ID"
+      },
+      "VariableType": "Identifier"
+    }
   },
   "Original_ID": {
     "Description": "participant identifier from recording"
@@ -10,16 +17,96 @@
     "Levels": {
       "one": "female",
       "two": "male"
+    },
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Sex",
+        "Label": "Sex"
+      },
+      "VariableType": "Categorical",
+      "Levels": {
+        "1": {
+          "TermURL": "snomed:248152002",
+          "Label": "Female"
+        },
+        "2": {
+          "TermURL": "snomed:248153007",
+          "Label": "Male"
+        }
+      },
+      "MissingValues": [
+        "NaN"
+      ]
     }
   },
   "age": {
-    "Description": "age of the participant"
+    "Description": "age of the participant",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Age",
+        "Label": "Age"
+      },
+      "VariableType": "Continuous",
+      "Format": {
+        "TermURL": "nb:FromFloat",
+        "Label": "float"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "BDI": {
-    "Description": "Beck Depression Inventory score.  Subjects were recruited to be either consistencly low or consistently high.  See Comp Psychiatry paper for more info."
+    "Description": "Beck Depression Inventory score.  Subjects were recruited to be either consistencly low or consistently high.  See Comp Psychiatry paper for more info.",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Assessment",
+        "Label": "Assessment Tool"
+      },
+      "VariableType": "Collection",
+      "IsPartOf": {
+        "TermURL": "snomed:273306008",
+        "Label": "Beck depression inventory"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "STAI": {
-    "Description": "Speilberger Trait Anxiety Inventory score"
+    "Description": "Speilberger Trait Anxiety Inventory score",
+    "Annotations": {
+      "IsAbout": {
+        "TermURL": "nb:Assessment",
+        "Label": "Assessment Tool"
+      },
+      "VariableType": "Collection",
+      "IsPartOf": {
+        "TermURL": "snomed:273830002",
+        "Label": "Spielberger state-trait anxiety inventory"
+      },
+      "MissingValues": [
+        "n/a",
+        "N/A",
+        "na",
+        "NA",
+        "nan",
+        "NaN",
+        ""
+      ]
+    }
   },
   "SCID": {
     "Description": "Only Hi BDI (no CTL) were invited for SCID.  Many declined, so SCID only available for some high-BDI subjects."
